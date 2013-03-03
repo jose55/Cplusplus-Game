@@ -35,7 +35,7 @@ int main (){
 	// Variabler
 	
 	// Grotta
-	int Room[50][100];
+	int Room[50][50];
 	double version = 0.001;
 	int n = 50;
 	int direction = 0; // 0 = Nord // 1 = East // 2 = South // 3 = West

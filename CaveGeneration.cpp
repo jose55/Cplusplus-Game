@@ -11,7 +11,7 @@
 
 using namespace std;
 
-int CaveGeneration (int Room[50][100], int x, int y, int n, int playercordX, int playercordY)
+int CaveGeneration (int Room[50][50], int x, int y, int n, int playercordX, int playercordY)
 {
 	srand(time(NULL)); // Sätter seedet för kartan // srand(siffra) för en definerad karta // srand(time(NULL)) för en random
 	
@@ -30,7 +30,7 @@ int CaveGeneration (int Room[50][100], int x, int y, int n, int playercordX, int
 	}
 
 	// Generera gångarna i grottan
-	while( road <= 200 && x < 50 && y < 45 && x > 1 && y > 1)
+	while( road <= 200 && x < 45 && y < 95 && x > 1 && y > 1)
 	{
 		direction = rand() % 3;
 
@@ -38,17 +38,15 @@ int CaveGeneration (int Room[50][100], int x, int y, int n, int playercordX, int
 			{
 			case 0: // Nord
 			
-			Room[y - 1][x] = 0; 
-			Room[y + 1][x] = 0;
+			Room[x][y - 1] = 0;
 			road ++;
 			y --;
-		
+
 			break;
 
 			case 1: // Öst
 			
-			Room[y + 1][x] = 0;
-			Room[y - 1][x] = 0;
+			Room[x - 1][y] = 0;
 			road ++;
 			x ++;
 
@@ -56,19 +54,17 @@ int CaveGeneration (int Room[50][100], int x, int y, int n, int playercordX, int
 
 			case 2: // Syd
 			
-			Room[y][x + 1] = 0;
-			Room[y][x - 1] = 0;
-			y ++;
+			Room[x][y + 1] = 0;
 			road ++;
+			y ++;
 
 			break;
 
 			case 3: // Väst
 			
-			Room[y - 1][x] = 0;
-			Room[y + 1][x] = 0;
-			x --;
+			Room[x + 1][y] = 0;
 			road ++;
+			x ++;
 		
 			break;
 			}

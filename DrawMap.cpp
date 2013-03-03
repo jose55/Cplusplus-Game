@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-int DrawMap(int Room[50][100], int x, int y, int n, int playercordX, int playercordY)
+int DrawMap(int Room[50][50], int x, int y, int n, int playercordX, int playercordY)
 {
   int counter = 0;
 
@@ -17,7 +17,7 @@ int DrawMap(int Room[50][100], int x, int y, int n, int playercordX, int playerc
 		{
 			for(int j = 0; j < n; j ++)
 			{
-				if(counter == 100) // Om räknaren är 100
+				if(counter == 50) // Om räknaren är 100
 				{
 					cout << endl;
 					counter = 0;
