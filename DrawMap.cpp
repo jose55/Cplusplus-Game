@@ -7,6 +7,7 @@ using namespace std;
 int DrawMap(int Room[50][50], int x, int y, int n, int playercordX, int playercordY)
 {
   int counter = 0;
+  Room[playercordX][playercordY] = 3;
 
 	// Skriv ut grottan
 
@@ -33,7 +34,7 @@ int DrawMap(int Room[50][50], int x, int y, int n, int playercordX, int playerco
 					cout << "+";
 
 				}
-				else if(Room[i][j] == 3)
+				else if(Room[i][j] == 3) // Om rum värdet är 3 // Spelaren
 				{
 					cout << "O";
 				}
@@ -43,8 +44,6 @@ int DrawMap(int Room[50][50], int x, int y, int n, int playercordX, int playerco
 			}
 		
 		}
-
-	// Skriv ut spelaren
 	return 0;
 
 }

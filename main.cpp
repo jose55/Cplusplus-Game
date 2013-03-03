@@ -20,13 +20,10 @@ Spelare
 #include <iostream>
 #include <conio.h>
 #include <Windows.h>
+using namespace std;
 
 // Externa filer
-
 #include "headers.h"
-
-
-using namespace std;
 
 int main (){
 
@@ -41,7 +38,7 @@ int main (){
 	int y = 25;
 	int x = 2;
 	char name = 0;
-
+	/*
 	while(1)
 	{
 		system("cls");
@@ -49,7 +46,7 @@ int main (){
 		DrawMap(Room, x, y, n, 1, 1);
 		Sleep(500);
 	}
-
+	*/
 	/*
 
 	// Meny
@@ -90,9 +87,9 @@ int main (){
 	switch(meny)
 	{
 	case 1:
-
+	*/
 		NewGame(Room, x, y, n);
-
+	/*
 
 	break;
 
