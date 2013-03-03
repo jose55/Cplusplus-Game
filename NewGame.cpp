@@ -12,9 +12,9 @@ int NewGame(int Room[50][50], int x, int y, int n)
 	// Spelaren
 	int player = 1;
 	int playerHealth = 100;
-	int playercordX = 0, playercordY = 0;
+	int playercordX = x;
+	int playercordY = y;
 	int playerdir = 0;
-
 
 	// Monster
 	int monster = 1;
@@ -34,6 +34,7 @@ int NewGame(int Room[50][50], int x, int y, int n)
 		playerdir = _getch();
 		Room[playercordY][playercordX] = 0;
 		PlayerMovement(Room, playercordX, playercordY, playerdir);
+		cout << "x : " << playercordX << "	y : " << playercordY;
 
 	}
 	return 0;
