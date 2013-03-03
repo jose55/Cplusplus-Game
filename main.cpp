@@ -231,7 +231,7 @@ int main (){
 	
 	// Grotta
 	int Room[50][50];
-	double version = 0.001;
+	double version = 0.002;
 	int n = 50;
 	int direction = 0; // 0 = Nord // 1 = East // 2 = South // 3 = West
 	int counter = 0;
