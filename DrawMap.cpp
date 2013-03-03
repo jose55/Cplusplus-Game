@@ -1,8 +1,5 @@
 // Externa filer
-#include "NewGame.h"
-#include "DrawMap.h"
-#include "CaveGeneration.h"
-#include "PlayerMovment.h"
+#include "headers.h"
 
 #include <iostream>
 using namespace std;

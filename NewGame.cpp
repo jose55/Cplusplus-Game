@@ -1,11 +1,5 @@
-
 // Externa filer
-#include "NewGame.h"
-#include "CaveGeneration.h"
-#include "DrawMap.h"
-#include "PlayerMovment.h"
-
-
+#include "headers.h"
 #include <conio.h>
 #include <iostream>
 
@@ -39,7 +33,7 @@ int NewGame(int Room[50][50], int x, int y, int n)
 		cout << playercordX << "  " << playercordY;
 		playerdir = _getch();
 		Room[playercordY][playercordX] = 0;
-		PlayerMovment(Room, playercordX, playercordY, playerdir);
+		PlayerMovement(Room, playercordX, playercordY, playerdir);
 
 	}
 	return 0;
