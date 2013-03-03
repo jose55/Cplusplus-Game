@@ -19,6 +19,7 @@ Spelare
 */
 #include <iostream>
 #include <conio.h>
+#include <Windows.h>
 
 // Externa filer
 
@@ -43,6 +44,14 @@ int main (){
 	int y = 25;
 	int x = 2;
 	char name = 0;
+
+	while(1)
+	{
+		system("cls");
+		CaveGeneration(Room, x, y, n, 1, 1);
+		DrawMap(Room, x, y, n, 1, 1);
+		Sleep(500);
+	}
 
 	/*
 
@@ -84,9 +93,10 @@ int main (){
 	switch(meny)
 	{
 	case 1:
-	*/
+
 		NewGame(Room, x, y, n);
-	/*
+
+
 	break;
 
 	case 2:
