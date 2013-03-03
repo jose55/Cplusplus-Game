@@ -1,5 +1,10 @@
-#include <iostream>
+// Externa filer
+#include "NewGame.h"
+#include "DrawMap.h"
+#include "CaveGeneration.h"
 #include "PlayerMovment.h"
+
+#include <iostream>
 using namespace std;
 
 int DrawMap(int Room[50][100], int x, int y, int n, int playercordX, int playercordY)
@@ -12,7 +17,7 @@ int DrawMap(int Room[50][100], int x, int y, int n, int playercordX, int playerc
 		{
 			for(int j = 0; j < n; j ++)
 			{
-				if(counter == 100) // Om räknaren är 50
+				if(counter == 100) // Om räknaren är 100
 				{
 					cout << endl;
 					counter = 0;

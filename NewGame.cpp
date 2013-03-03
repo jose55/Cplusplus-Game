@@ -1,12 +1,17 @@
+
+// Externa filer
+#include "NewGame.h"
 #include "CaveGeneration.h"
 #include "DrawMap.h"
 #include "PlayerMovment.h"
+
+
 #include <conio.h>
 #include <iostream>
 
 using namespace std;
 
-int newgame(int Room[50][100], int x, int y, int n)
+int NewGame(int Room[50][100], int x, int y, int n)
 {
 	// Variabler
 
@@ -32,7 +37,7 @@ int newgame(int Room[50][100], int x, int y, int n)
 		system("cls");
 		DrawMap(Room, x, y, n, playercordX, playercordY);
 		cout << playercordX << "  " << playercordY;
-		playerdir = getch();
+		playerdir = _getch();
 		Room[playercordY][playercordX] = 0;
 		PlayerMovment(Room, playercordX, playercordY, playerdir);
 

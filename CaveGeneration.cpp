@@ -1,7 +1,13 @@
+// Externa filer
+#include "CaveGeneration.h"
+#include "NewGame.h"
+#include "DrawMap.h"
+#include "CaveGeneration.h"
+#include "PlayerMovment.h"
+
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-#include "CaveGeneration.h"
 
 using namespace std;
 

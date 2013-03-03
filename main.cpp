@@ -18,7 +18,6 @@ Items & Monster
 Spelare
 */
 #include <iostream>
-#include <Windows.h>
 #include <conio.h>
 
 // Externa filer
@@ -34,7 +33,6 @@ using namespace std;
 int main (){
 
 	// Variabler
-	
 	
 	// Grotta
 	int Room[50][100];
