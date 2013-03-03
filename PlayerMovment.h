@@ -1,1 +1,0 @@
-int PlayerMovment(int Room[50][50], int playercordX, int playercordY, int playerdir);
