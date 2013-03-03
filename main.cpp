@@ -23,10 +23,7 @@ Spelare
 
 // Externa filer
 
-#include "CaveGeneration.h"
-#include "DrawMap.h"
-#include "NewGame.h"
-#include "PlayerMovment.h"
+#include "headers.h"
 
 
 using namespace std;
