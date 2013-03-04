@@ -19,20 +19,23 @@ int DrawMap(int Room[50][50], int x, int y, int n, int playercordX, int playerco
 					cout << endl;
 					counter = 0;
 				}
-
-				if(Room[i][j] == 0) // Om rum värdet är 0
+				// Skriv ut tomrummet
+				if(Room[i][j] == 0)
 				{
-					cout << "0";
+					cout << " ";
 				}
-				else if(Room[i][j] == 1) // Om rum värdet är 1
+				// Skriv ut väggarna
+				else if(Room[i][j] == 1)
 				{
-					cout << "1";
+					cout << "#";
 				}
-				else if(Room[i][j] == 2) // Om rum värdet är 2
+				// Skriv ut health
+				else if(Room[i][j] == 2)
 				{
 					cout << "+";
 
 				}
+				// Skriv ut spelaren
 				else if(Room[i][j] == 3)
 				{
 					cout << "O";
@@ -44,7 +47,7 @@ int DrawMap(int Room[50][50], int x, int y, int n, int playercordX, int playerco
 		
 		}
 
-	// Skriv ut spelaren
+	
 	return 0;
 
 }

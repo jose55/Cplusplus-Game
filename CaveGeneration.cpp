@@ -26,44 +26,51 @@ int CaveGeneration (int Room[50][50], int x, int y, int n, int playercordX, int 
 	}
 
 	// Generera gångarna i grottan
-	while(x < 49 && y < 45)
+	while(road < 200 && x < 49 && y < 45)
 	{
+		if(x == 49 || y == 45){
+			x - 10;
+			y - 20;
+		}
+
+
 		direction = rand() % 3;
 
-			switch(direction)
-			{
-			case 0: // Nord
-			Room[x][y + 1] = 0;
-			Room[x][y - 1] = 0;
-			road ++;
-			y --;
+		switch(direction)
+		{
+		case 0: // Nord
+		Room[x][y + 1] = 0;
+		Room[x][y - 1] = 0;
+		road ++;
+		y --;
 
-			break;
+		break;
 
-			case 1: // Öst
-			Room[x + 1][y] = 0;
-			Room[x - 1][y] = 0;
-			road ++;
-			x ++;
+		case 1: // Öst
+		Room[x + 1][y] = 0;
+		Room[x - 1][y] = 0;
+		road ++;
+		x ++;
 
-			break;
+		break;
 
-			case 2: // Syd
-			Room[x][y - 1] = 0;
-			Room[x][y + 1] = 0;
-			road ++;
-			y ++;
+		case 2: // Syd
+		Room[x][y - 1] = 0;
+		Room[x][y + 1] = 0;
+		road ++;
+		y ++;
 
-			break;
+		break;
 
-			case 3: // Väst
-			Room[x - 1][y] = 0;
-			Room[x + 1][y] = 0;
-			road ++;
-			x ++;
+		case 3: // Väst
+		Room[x - 1][y] = 0;
+		Room[x + 1][y] = 0;
+		road ++;
+		x ++;
 		
-			break;
-			}
+		break;
+		}
+
 		
 	}
 

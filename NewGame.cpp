@@ -8,8 +8,6 @@ using namespace std;
 
 int NewGame(int Room[50][50], int x, int y, int n, int playerX, int playerY)
 {
-	// Variabler
-
 	// Generera kartan och skriv ut den
 	
 	CaveGeneration(Room, x, y, n, playerX, playerY);
@@ -18,18 +16,17 @@ int NewGame(int Room[50][50], int x, int y, int n, int playerX, int playerY)
 
 	DrawMap(Room, x, y, n, playerX, playerY);
 
-	while(Player(x, y, Room, n) == 1) // Medans Player funktionen retunerar 1
+	// Medans Player funktionen retunerar 1
+	while(Player(x, y, Room, n) == 1) 
 	{
-		Player(x, y, Room, n);
+		// Anropar funktionen för spelaren
+		Player(x, y, Room, n); 
+		// Rensar konsol fönstret
 		system("cls");
+		// Skriver ut kartan igen
 		DrawMap(Room, x, y, n, playerX, playerY);
 
 	}
-
-
-
-
-	
 
 	return 0;
 }
