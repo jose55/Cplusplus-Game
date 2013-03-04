@@ -38,6 +38,10 @@ int main (){
 	int y = 25;
 	int x = 2;
 	char name = 0;
+
+	int playerX = x;
+	int playerY = y;
+
 	/*
 	while(1)
 	{
@@ -88,7 +92,7 @@ int main (){
 	{
 	case 1:
 	*/
-		NewGame(Room, x, y, n);
+		NewGame(Room, x, y, n, playerX, playerY);
 	/*
 
 	break;

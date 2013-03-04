@@ -12,7 +12,7 @@ int PlayerMovement(int Room[50][50], int playercordX, int playercordY, int playe
 
 	// Om användaren trycker på W eller w
 
-	if(playerdir == 119 || playerdir == 87 && Room[playercordX][playercordY - 1] == 0)
+	if(playerdir == 119 || playerdir == 87 && Room[playercordY - 1][playercordX] == 0)
 	{
 		playercordY --;
 		Room[playercordX][playercordY] = 3;

@@ -26,7 +26,7 @@ int CaveGeneration (int Room[50][50], int x, int y, int n, int playercordX, int 
 	}
 
 	// Generera gångarna i grottan
-	while(x < 45 && y < 45)
+	while(x < 49 && y < 45)
 	{
 		direction = rand() % 3;
 

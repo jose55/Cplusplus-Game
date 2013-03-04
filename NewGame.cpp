@@ -1,41 +1,35 @@
 // Externa filer
 #include "headers.h"
+
 #include <conio.h>
 #include <iostream>
 
 using namespace std;
 
-int NewGame(int Room[50][50], int x, int y, int n)
+int NewGame(int Room[50][50], int x, int y, int n, int playerX, int playerY)
 {
 	// Variabler
 
-	// Spelaren
-	int player = 1;
-	int playerHealth = 100;
-	int playercordX = x;
-	int playercordY = y;
-	int playerdir = 0;
-
-	// Monster
-	int monster = 1;
-	int monsteramount = 1;
-
 	// Generera kartan och skriv ut den
 	
-	CaveGeneration(Room, x, y, n, playercordX, playercordY);
+	CaveGeneration(Room, x, y, n, playerX, playerY);
 
-	// Medans användaren lever
+	// Skriv ut den initiella kartan
 
-	while(playerHealth > 0)
+	DrawMap(Room, x, y, n, playerX, playerY);
+
+	while(Player(x, y, Room) == 1) // Medans Player funktionen retunerar 1
 	{
+		Player(x, y, Room);
 		system("cls");
-		DrawMap(Room, x, y, n, playercordX, playercordY);
-		cout << playercordX << "  " << playercordY;
-		playerdir = _getch();
-		Room[playercordY][playercordX] = 0;
-		PlayerMovement(Room, playercordX, playercordY, playerdir);
-		cout << "x : " << playercordX << "	y : " << playercordY;
+		DrawMap(Room, x, y, n, playerX, playerY);
 
 	}
+
+
+
+
+	
+
 	return 0;
 }
