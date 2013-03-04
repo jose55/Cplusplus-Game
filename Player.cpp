@@ -23,28 +23,29 @@ int Player(int x, int y, int Room[50][50], int n)
 		playerdir = _getch();
 		Room[playerX][playerY] = 0;
 
-
-		if(playerdir == 119 || playerdir == 87 && Room[playerX][playerY - 1] == 0)
-		{
-			playerY --;
-			Room[playerX][playerY] = 3;
-		}
-		// Om användaren trycker på S eller s
-		else if(playerdir == 115 || playerdir == 83 && Room[playerX][playerY + 1] == 0)
-		{
-			playerY ++;
-			Room[playerX][playerY] = 3;
-		}
-		// Om användaren trycker på A eller a
-		else if(playerdir == 97 || playerdir == 65  && Room[playerX - 1][playerY] == 0)
+		// Om användaren trycker på W eller w 
+		if(playerdir == 119 || playerdir == 87 && Room[playerX --][playerY] != 1)
 		{
 			playerX --;
 			Room[playerX][playerY] = 3;
 		}
-		// Om användaren trycker på D eller d
-		else if(playerdir == 100 || playerdir == 68 && Room[playerX + 1][playerY] == 0)
+
+		// Om användaren trycker på S eller s
+		else if(playerdir == 115 || playerdir == 83 && Room[playerX ++][playerY] != 1)
 		{
 			playerX ++;
+			Room[playerX][playerY] = 3;
+		}
+		// Om användaren trycker på A eller a
+		else if(playerdir == 97 || playerdir == 65  && Room[playerX][playerY --] != 1)
+		{
+			playerY --;
+			Room[playerX][playerY] = 3;
+		}
+		// Om användaren trycker på D eller d
+		else if(playerdir == 100 || playerdir == 68 && Room[playerX][playerY ++] != 1)
+		{
+			playerY ++;
 			Room[playerX][playerY] = 3;
 		}
 		cout << playerX << "	" << playerY;

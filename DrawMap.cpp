@@ -22,11 +22,11 @@ int DrawMap(int Room[50][50], int x, int y, int n, int playercordX, int playerco
 
 				if(Room[i][j] == 0) // Om rum värdet är 0
 				{
-					cout << " ";
+					cout << "0";
 				}
 				else if(Room[i][j] == 1) // Om rum värdet är 1
 				{
-					cout << "#";
+					cout << "1";
 				}
 				else if(Room[i][j] == 2) // Om rum värdet är 2
 				{
