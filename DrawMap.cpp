@@ -9,7 +9,7 @@ int DrawMap(int Room[50][50], int x, int y, int n, int playercordX, int playerco
   int counter = 0;
 
 	// Skriv ut grottan
-
+  system("cls");
 	for(int i = 0; i < n; i ++)
 		{
 			for(int j = 0; j < n; j ++)

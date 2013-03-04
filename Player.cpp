@@ -3,7 +3,7 @@
 #include <conio.h>
 using namespace std;
 
-int Player(int x, int y, int Room[50][50])
+int Player(int x, int y, int Room[50][50], int n)
 {
 	// Variabler
 	int player = 1;
@@ -21,9 +21,10 @@ int Player(int x, int y, int Room[50][50])
 	while(playerhealth > 0 && playerlives > 0)
 	{
 		playerdir = _getch();
+		Room[playerX][playerY] = 0;
 
 
-		if(playerdir == 119 || playerdir == 87 && Room[playerX - 1][playerX] == 0)
+		if(playerdir == 119 || playerdir == 87 && Room[playerX][playerY - 1] == 0)
 		{
 			playerY --;
 			Room[playerX][playerY] = 3;
@@ -40,13 +41,18 @@ int Player(int x, int y, int Room[50][50])
 			playerX --;
 			Room[playerX][playerY] = 3;
 		}
+		// Om användaren trycker på D eller d
 		else if(playerdir == 100 || playerdir == 68 && Room[playerX + 1][playerY] == 0)
 		{
 			playerX ++;
 			Room[playerX][playerY] = 3;
 		}
+		cout << playerX << "	" << playerY;
 
-		return 1;
+		DrawMap(Room, x, y, n, playerX, playerY);
+
+
+
 	}
 
 	return 0;
