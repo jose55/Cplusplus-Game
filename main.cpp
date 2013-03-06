@@ -31,14 +31,16 @@ int main (){
 	
 	// Grotta
 	int Room[50][50];
-	double version = 0.001;
+
+
+	double version = 0.02;
 	int n = 50;
 	int direction = 0; // 0 = Nord // 1 = East // 2 = South // 3 = West
 	int counter = 0;
+	// X och Y definerar vart cavegeneration ska börja
 	int y = 25;
 	int x = 2;
-	char name = 0;
-
+	// Sätt
 	int playerX = x;
 	int playerY = y;
 
@@ -50,8 +52,7 @@ int main (){
 		DrawMap(Room, x, y, n, 1, 1);
 		Sleep(500);
 	}
-	*/
-	/*
+	
 
 	// Meny
 	int meny = 0;
@@ -94,7 +95,6 @@ int main (){
 	*/
 		NewGame(Room, x, y, n, playerX, playerY);
 	/*
-
 	break;
 
 	case 2:
@@ -117,15 +117,8 @@ int main (){
 
 	}
 
-	cavegeneration(Room, x, y, n); // Anropar funktionen för att generera grottan
-	drawmap(Room, x , y , n);
-		
-			cin.get();
-			system("cls");
-
 	
 	*/
-	
 	cout << endl << endl; // Extra rader
 
 	return 0;

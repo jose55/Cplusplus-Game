@@ -12,7 +12,9 @@ int Player(int x, int y, int Room[50][50], int n)
 	// Antalet liv spelaren har
 	int playerlives = 3;
 	// Spelarens kordinater
-	int playerX = x, playerY = y; 
+	int playerX = x, playerY = y;
+	// Spelarens gammla kordinater
+	int oldX, oldY;
 	// Vilket håll gubben ska gå åt
 	int playerdir = 0; 
 	// Medans spelaren lever
@@ -21,7 +23,9 @@ int Player(int x, int y, int Room[50][50], int n)
 	{
 		
 		playerdir = _getch();
-		Room[playerX][playerY] = 0;
+		// Sätter oldX och oldY till användarens nuvarande kordinater
+		oldX = playerX;
+		oldY = playerY;
 
 		// Om användaren trycker på W eller w 
 		if((playerdir == 119 || playerdir == 87) && Room[playerX - 1][playerY] == 0)
@@ -53,9 +57,20 @@ int Player(int x, int y, int Room[50][50], int n)
 			Room[playerX][playerY] = 3;
 		}
 		else{}
-		cout << playerX << "	" << playerY;
 
+
+		// Om användaren inte står kvar på samma ställe
+		if(oldX != playerX || oldY != playerY)
+		{
+			Room[oldX][oldY] = 0;
+		}
+
+
+		
+
+		// Anropar funktionen för att skriva ut kartan
 		DrawMap(Room, x, y, n, playerX, playerY);
+		cout << "Health : " << playerhealth << endl;
 
 	}
 

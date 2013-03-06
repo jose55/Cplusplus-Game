@@ -28,11 +28,6 @@ int CaveGeneration (int Room[50][50], int x, int y, int n, int playercordX, int 
 	// Generera gångarna i grottan
 	while(road < 200 && x < 49 && y < 45)
 	{
-		if(x == 49 || y == 45){
-			x - 10;
-			y - 20;
-		}
-
 
 		direction = rand() % 3;
 

@@ -7,8 +7,10 @@ using namespace std;
 
 int PlayerMovement(int Room[50][50], int playercordX, int playercordY, int playerdir)
 {
+	int oldPlayerX = playercordX;
+	int oldPlayerY = playercordY;
 
-	Room[playercordX][playercordY] = 0;
+	
 
 	// Om användaren trycker på W eller w
 
@@ -29,11 +31,18 @@ int PlayerMovement(int Room[50][50], int playercordX, int playercordY, int playe
 		playercordX --;
 		Room[playercordX][playercordY] = 3;
 	}
+	// Om användaren trycker på D eller d
 	else if(playerdir == 100 || playerdir == 68 && Room[playercordX + 1][playercordY] == 0)
 	{
 		playercordX ++;
 		Room[playercordX][playercordY] = 3;
 	}
+
+	if(oldPlayerX == playercordX || oldPlayerY == playercordY)
+	{
+		Room[playercordX][playercordY] = 3;
+	}
+
 
 	return 0;
 }
