@@ -31,8 +31,7 @@ int main (){
 	
 	// Grotta
 	int Room[50][50];
-
-
+	// Aktuell Version
 	double version = 0.02;
 	int n = 50;
 	int direction = 0; // 0 = Nord // 1 = East // 2 = South // 3 = West
@@ -40,7 +39,7 @@ int main (){
 	// X och Y definerar vart cavegeneration ska börja
 	int y = 25;
 	int x = 2;
-	// Sätt
+	// Sätt spelarens start position till x och y
 	int playerX = x;
 	int playerY = y;
 

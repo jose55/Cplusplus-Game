@@ -29,7 +29,7 @@ int CaveGeneration (int Room[50][50], int x, int y, int n, int playercordX, int 
 	while(road < 200 && x < 49 && y < 45)
 	{
 
-		direction = rand() % 3;
+		direction = rand() % 3; // Generera vilket håll vägen ska gå åt
 
 		switch(direction)
 		{
