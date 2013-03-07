@@ -60,9 +60,6 @@ int Player(int x, int y, int Room[50][50], int n)
 			Room[oldX][oldY] = 0;
 		}
 
-
-		
-
 		// Anropar funktionen för att skriva ut kartan
 		
 		cout << "Health : " << playerhealth << endl;
